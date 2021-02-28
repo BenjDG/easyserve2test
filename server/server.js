@@ -1,6 +1,7 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
+const app = express();
 const helmet = require('helmet');
 const cors = require('cors');
 const session = require('express-session');
@@ -20,7 +21,6 @@ const seedOrderItem = require('./database/seedOrderItem');
 const seedRestTable = require('./database/seedRestTable');
 
 const PORT = process.env.PORT || 3001;
-const app = express();
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
